@@ -48,7 +48,8 @@
       "type": "object",
       "oneOf": [
         { "required": ["queue"] },
-        { "required": ["server"] }
+        { "required": ["server"] },
+        { "required": ["template"] }
       ],
       "properties": {
         "phase": {
@@ -105,6 +106,13 @@
               { "$ref": "#/definitions/templateReference" }
             ]
           }
+        },
+        "template": {
+          "type": "string",
+          "description": "Reference to a template for this phase"
+        },
+        "parameters": {
+          "type": "object"
         }
       },
       "additionalProperties": false

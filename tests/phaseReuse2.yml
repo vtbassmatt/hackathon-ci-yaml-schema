@@ -1,0 +1,13 @@
+parameters:
+  name: ''
+  queue: ''
+  sign: false
+
+phases:
+- phase: DoIt
+  displayName: ${{ parameters.name }}
+  queue: ${{ parameters.queue }}
+  steps:
+  - script: npm install
+  - script: npm test
+  - script: npm sign ${{ sign }}
