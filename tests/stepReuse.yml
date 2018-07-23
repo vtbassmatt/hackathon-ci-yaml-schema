@@ -1,0 +1,16 @@
+phases:
+- phase: macOS
+  queue: Hosted macOS Preview
+  steps:
+  - template: stepReuse2.yml # Template reference
+
+- phase: Linux
+  queue: Hosted Linux Preview
+  steps:
+  - template: stepReuse2.yml # Template reference
+
+- phase: Windows
+  queue: Hosted VS2017
+  steps:
+  - template: stepReuse2.yml # Template reference
+  - script: sign             # Extra step on Windows only
