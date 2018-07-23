@@ -101,7 +101,7 @@
               { "$ref": "#/definitions/bash" },
               { "$ref": "#/definitions/powershell" },
               { "$ref": "#/definitions/checkout" },
-              { "$ref": "#/definitions/task" },
+              { "$ref": "task-schema.json" },
               { "$ref": "#/definitions/templateReference" }
             ]
           }
@@ -346,51 +346,6 @@
           "type": "boolean",
           "description": "Fetch Git-LFS objects?"
         }  
-      },
-      "additionalProperties": false
-    },
-    "task": {
-      "type": "object",
-      "required": ["task"],
-      "properties": {
-        "task": {
-          "type": "string",
-          "description": "Task reference with optional major version",
-          "pattern": "^[A-Za-z]*(@[0-9]+)?"
-        },
-        "displayName": {
-          "type": "string",
-          "description": "Human-readable name for the task"
-        },
-        "name": {
-          "type": "string",
-          "description": "ID of the task instance",
-          "pattern": "^[_A-Za-z0-9]*$"
-        },
-        "condition": {
-          "type": "string",
-          "description": "Evaluate this condition expression to determine whether to run this task"
-        },
-        "continueOnError": {
-          "type": "boolean",
-          "description": "Continue running the parent phase even on failure?"
-        },
-        "enabled": {
-          "type": "boolean",
-          "description": "Run this task when the phase runs?"
-        },
-        "timeoutInMinutes": {
-          "type": "integer",
-          "description": "Time to wait for this task to complete before the server kills it"
-        },
-        "inputs": {
-          "type": "object",
-          "description": "Task-specific inputs"
-        },
-        "env": {
-          "type": "object",
-          "description": "Variables to map into the process's environment"
-        }
       },
       "additionalProperties": false
     },
