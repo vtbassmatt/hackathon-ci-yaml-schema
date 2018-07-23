@@ -66,8 +66,27 @@
                 "variables": {
                     "type": "array",
                     "description": "Phase-specific variables"
+                },
+                "steps": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            { "$ref": "#/definitions/script" },
+                            { "$ref": "#/definitions/bash" },
+                            { "$ref": "#/definitions/powershell" },
+                            { "$ref": "#/definitions/checkout" },
+                            { "$ref": "#/definitions/task" },
+                            { "$ref": "#/definitions/templateReference" }
+                        ]
+                    }
                 }
             }
-         }
+        },
+        "script": {},
+        "bash": {},
+        "powershell": {},
+        "checkout": {},
+        "task": {},
+        "templateReference": {}
     }
-  }
+}
