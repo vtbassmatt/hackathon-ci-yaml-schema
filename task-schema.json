@@ -6,11 +6,51 @@
   "description": "A task definition",
   "type": "object",
   "required": [ "task" ],
+  "anyOf": [
+    {
+      "properties": {
+        "task": {
+          "pattern": "^DotNetCoreCLI@2$",
+          "description": "dotnet CLI"
+        },
+        "inputs": {
+          "required": ["command"],
+          "properties": {
+            "command": {},
+            "projects": {},
+            "verbosityRestore": {}
+          }
+        }
+      },
+      "required": ["inputs"]
+    },
+    {
+      "properties": {
+        "task": {
+          "pattern": "^CMake@1$",
+          "description": "CMake"
+        },
+        "inputs": {
+          "properties": {
+            "workingDirectory": {},
+            "cmakeArgs": {}
+          }
+        }
+      }
+    },
+    {
+      "$comment": "Fall-through to catch non-out-of-box tasks",
+      "properties": {
+        "task": {
+          "pattern": "^[A-Za-z]*(@[0-9]+)?$"
+        }
+      }
+    }
+  ],
   "properties": {
     "task": {
       "type": "string",
-      "description": "Task reference with optional major version",
-      "pattern": "^[A-Za-z]*(@[0-9]+)?"
+      "description": "Task reference with optional major version"
     },
     "displayName": {
       "type": "string",
