@@ -15,10 +15,17 @@
         },
         "inputs": {
           "required": ["command"],
+          "description": "dotnet CLI inputs",
           "properties": {
-            "command": {},
-            "projects": {},
-            "verbosityRestore": {}
+            "command": {
+              "description": "Command to run"
+            },
+            "projects": {
+              "description": "Minimatch of projects to operate on"
+            },
+            "verbosityRestore": {
+              "description": "Level of verbosity in restore"
+            }
           }
         }
       },
@@ -31,18 +38,15 @@
           "description": "CMake"
         },
         "inputs": {
+          "description": "CMake inputs",
           "properties": {
-            "workingDirectory": {},
-            "cmakeArgs": {}
+            "workingDirectory": {
+              "description": "Working directory to start in"
+            },
+            "cmakeArgs": {
+              "description": "Arguments to CMake"
+            }
           }
-        }
-      }
-    },
-    {
-      "$comment": "Fall-through to catch non-out-of-box tasks",
-      "properties": {
-        "task": {
-          "pattern": "^[A-Za-z]*@[0-9]+$"
         }
       }
     }

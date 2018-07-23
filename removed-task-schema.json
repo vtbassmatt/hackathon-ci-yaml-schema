@@ -1,0 +1,8 @@
+{
+  "$comment": "Fall-through to catch non-out-of-box tasks",
+  "properties": {
+    "task": {
+      "pattern": "^[A-Za-z]*@[0-9]+$"
+    }
+  }
+}
