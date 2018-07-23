@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://github.com/Microsoft/vsts-agent/blob/master/src/Misc/ci-schema.json",
+  "$comment": "v1.137.0",
   "title": "Pipeline schema",
   "description": "A pipeline definition",
   "type": "object",
@@ -69,6 +70,7 @@
         },
         "steps": {
           "type": "array",
+          "description": "A list of steps to run",
           "items": {
             "oneOf": [
               { "$ref": "#/definitions/script" },
@@ -82,11 +84,114 @@
         }
       }
     },
-    "script": {},
-    "bash": {},
-    "powershell": {},
-    "checkout": {},
-    "task": {},
-    "templateReference": {}
+    "script": {
+      "type": "object",
+      "description": "An inline script step",
+      "required": ["script"],
+      "properties": {
+        "script": {
+          "type": "string",
+          "description": "An inline script"
+        }
+      }
+    },
+    "bash": {
+      "type": "object",
+      "required": ["bash"],
+      "properties": {
+        "bash": {
+          "type": "string"
+        }
+      }
+    },
+    "powershell": {
+      "type": "object",
+      "required": ["powershell"],
+      "properties": {
+        "powershell": {
+          "type": "string"
+        }
+      }
+    },
+    "checkout": {
+      "type": "object",
+      "required": ["checkout"],
+      "properties": {
+        "checkout": {
+          "enum": ["self", "none"],
+          "description": "Check out the repository containing this pipeline definition"
+        },
+        "clean": {
+          "type": "boolean",
+          "description": "Start from a clean, freshly-fetched workdir?"
+        },
+        "fetchDepth": {
+          "type": "integer",
+          "description": "Depth of Git graph to fetch"
+        },
+        "lfs": {
+          "type": "boolean",
+          "description": "Fetch Git-LFS objects?"
+        }
+      }
+    },
+    "task": {
+      "type": "object",
+      "required": ["task"],
+      "properties": {
+        "task": {
+          "type": "string",
+          "description": "Task reference with optional major version",
+          "pattern": "^[A-Za-z]*(@[0-9]+)?"
+        },
+        "displayName": {
+          "type": "string",
+          "description": "Human-readable name for the task"
+        },
+        "name": {
+          "type": "string",
+          "description": "ID of the task instance",
+          "pattern": "^[_A-Za-z0-9]*$"
+        },
+        "condition": {
+          "type": "string",
+          "description": "Evaluate this condition expression to determine whether to run this task"
+        },
+        "continueOnError": {
+          "type": "boolean",
+          "description": "Continue running the parent phase even on failure?"
+        },
+        "enabled": {
+          "type": "boolean",
+          "description": "Run this task when the phase runs?"
+        },
+        "timeoutInMinutes": {
+          "type": "integer",
+          "description": "Time to wait for this task to complete before the server kills it"
+        },
+        "inputs": {
+          "type": "object",
+          "description": "Task-specific inputs"
+        },
+        "env": {
+          "type": "object",
+          "description": "Variables to map into the process's environment"
+        }
+      }
+    },
+    "templateReference": {
+      "type": "object",
+      "required": ["template"],
+      "properties": {
+        "template": {
+          "type": "string",
+          "description": "A URL to a step template"
+        },
+        "parameters": {
+          "type": "object",
+          "description": "Step-specific parameters"
+        }
+      }
+    }
   }
 }
