@@ -1,0 +1,29 @@
+phases:
+
+# Set an output variable from a phase with a matrix
+- phase: A
+  queue:
+    name: Hosted Linux Preview
+    parallel: 2
+    matrix:
+      debug:
+        configuration: debug
+        platform: x64
+      release:
+        configuration: release
+        platform: x64
+  steps:
+  - script: echo "##vso[task.setvariable variable=myOutputVar;isOutput=true]this is the $(configuration) value"
+    name: setvar
+  - script: echo $(setvar.myOutputVar)
+    name: echovar
+
+# Map the variable from the debug job
+- phase: B
+  dependsOn: A
+  queue: Hosted Linux Preview
+  variables:
+    myVarFromPhaseADebug: $[ dependencies.A.outputs['debug.setvar.myOutputVar'] ]
+  steps:
+  - script: echo $(myVarFromPhaseADebug)
+    name: echovar

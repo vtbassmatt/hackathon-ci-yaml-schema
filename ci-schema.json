@@ -98,7 +98,7 @@
           "description": "True if this is an agent-less phase (runs on server)"
         },
         "variables": {
-          "type": "array",
+          "type": "object",
           "description": "Phase-specific variables"
         },
         "steps": {
