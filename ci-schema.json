@@ -12,6 +12,7 @@
     "pipeline": {
       "type": "object",
       "required": [],
+      "additionalProperties": false,
       "properties": {
         "name": {
           "description": "Pipeline name",
@@ -35,8 +36,7 @@
                 "$ref": "#/definitions/repositoryReference"
               }
             }
-          },
-          "additionalProperties": false
+          }
         },
         "variables": {
           "description": "Pipeline-wide variables",
@@ -48,12 +48,12 @@
           "items": {
             "$ref": "#/definitions/phase"
           }
-        },
-        "additionalProperties": false
+        }
       }
     },
     "phase": {
       "type": "object",
+      "additionalProperties": false,
       "oneOf": [
         { "required": ["queue"] },
         { "required": ["server"] },
@@ -122,12 +122,12 @@
         "parameters": {
           "type": "object"
         }
-      },
-      "additionalProperties": false
+      }
     },
     "queue": {
       "type": "object",
       "description": "Queue details",
+      "additionalProperties": false,
       "required": ["name"],
       "properties": {
         "name": {
@@ -161,6 +161,7 @@
     "server": {
       "type": "object",
       "description": "Server phase details",
+      "additionalProperties": false,
       "properties": {
         "timeoutInMinutes": {
           "type": "integer",
@@ -193,6 +194,7 @@
     "script": {
       "type": "object",
       "description": "An inline script step",
+      "additionalProperties": false,
       "required": ["script"],
       "properties": {
         "script": {
@@ -236,12 +238,12 @@
           "type": "object",
           "description": "Variables to map into the process's environment"
         }
-      },
-      "additionalProperties": false
+      }
     },
     "bash": {
       "type": "object",
       "required": ["bash"],
+      "additionalProperties": false,
       "properties": {
         "bash": {
           "type": "string"
@@ -283,12 +285,12 @@
           "type": "object",
           "description": "Variables to map into the process's environment"
         }
-      },
-      "additionalProperties": false
+      }
     },
     "powershell": {
       "type": "object",
       "required": ["powershell"],
+      "additionalProperties": false,
       "properties": {
         "powershell": {
           "type": "string",
@@ -339,12 +341,12 @@
           "type": "object",
           "description": "Variables to map into the process's environment"
         }
-      },
-      "additionalProperties": false
+      }
     },
     "checkout": {
       "type": "object",
       "required": ["checkout"],
+      "additionalProperties": false,
       "properties": {
         "checkout": {
           "enum": ["self", "none"],
@@ -362,12 +364,12 @@
           "type": "boolean",
           "description": "Fetch Git-LFS objects?"
         }  
-      },
-      "additionalProperties": false
+      }
     },
     "templateReference": {
       "type": "object",
       "required": ["template"],
+      "additionalProperties": false,
       "properties": {
         "template": {
           "type": "string",
@@ -377,12 +379,12 @@
           "type": "object",
           "description": "Step-specific parameters"
         }
-      },
-      "additionalProperties": false
+      }
     },
     "repositoryReference": {
       "type": "object",
       "required": ["repository", "type"],
+      "additionalProperties": false,
       "properties": {
         "repository": {
           "type": "string",
@@ -412,12 +414,12 @@
             "refs/tags/lkg"
           ]
         }
-      },
-      "additionalProperties": false
+      }
     },
     "containerReference": {
       "type": "object",
       "required": ["container", "image"],
+      "additionalProperties": false,
       "properties": {
         "container": {
           "type": "string",
@@ -448,8 +450,7 @@
           "type": "object",
           "description": "Variables to map into the container's environment"
         }
-      },
-      "additionalProperties": false
+      }
     }
   }
 }
