@@ -6,3 +6,8 @@ phases:
   displayName: 'Do a thing'
   steps:
   - script: echo Hello world
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: x
+  - task: CMake@1
+  - task: Foo
