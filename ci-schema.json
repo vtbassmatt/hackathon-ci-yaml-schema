@@ -70,7 +70,17 @@
           "description": "Human-readable name of the phase"
         },
         "dependsOn": {
-          "type": "string",
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          ],
           "description": "Any phases which must complete before this one"
         },
         "condition": {
