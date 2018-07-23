@@ -4,40 +4,46 @@
   "$comment": "v1.137.0",
   "title": "Pipeline schema",
   "description": "A pipeline definition",
-  "type": "object",
-  "properties": {
-    "name": {
-      "description": "Pipeline name",
-      "type": "string"
-    },
-    "resources": {
-      "description": "Containers and repositories used in the build",
+  "oneOf": [
+    { "$ref": "#/definitions/pipeline" },
+    { "$ref": "#/definitions/phase"}
+  ],
+  "definitions": {
+    "pipeline": {
       "type": "object",
+      "required": [],
       "properties": {
-        "containers": {
-          "$comment": "TODO"
+        "name": {
+          "description": "Pipeline name",
+          "type": "string"
         },
-        "repository": {
-          "$comment": "TODO"
-        }
-      },
-      "additionalProperties": false
-    },
-    "variables": {
-      "description": "Pipeline-wide variables",
-      "type": "object"
-    },
-    "phases": {
-      "description": "Phases of the pipeline",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/phase"
+        "resources": {
+          "description": "Containers and repositories used in the build",
+          "type": "object",
+          "properties": {
+            "containers": {
+              "$comment": "TODO"
+            },
+            "repository": {
+              "$comment": "TODO"
+            }
+          },
+          "additionalProperties": false
+        },
+        "variables": {
+          "description": "Pipeline-wide variables",
+          "type": "object"
+        },
+        "phases": {
+          "description": "Phases of the pipeline",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/phase"
+          }
+        },
+        "additionalProperties": false
       }
     },
-    "additionalProperties": false
-  },
-  "required": [],
-  "definitions": {
     "phase": {
       "type": "object",
       "oneOf": [

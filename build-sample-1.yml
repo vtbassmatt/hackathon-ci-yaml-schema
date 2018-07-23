@@ -1,3 +1,4 @@
+# A basic example build
 name: 'Simple example'
 phases:
 - phase: DoAThing

@@ -1,0 +1,3 @@
+# Single phase build
+steps:
+- script: echo hello really simple!
