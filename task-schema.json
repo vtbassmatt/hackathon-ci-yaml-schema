@@ -42,7 +42,7 @@
       "$comment": "Fall-through to catch non-out-of-box tasks",
       "properties": {
         "task": {
-          "pattern": "^[A-Za-z]*(@[0-9]+)?$"
+          "pattern": "^[A-Za-z]*@[0-9]+$"
         }
       }
     }
@@ -50,7 +50,7 @@
   "properties": {
     "task": {
       "type": "string",
-      "description": "Task reference with optional major version"
+      "description": "Task reference including major version"
     },
     "displayName": {
       "type": "string",
