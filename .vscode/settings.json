@@ -1,5 +1,6 @@
 {
     "yaml.schemas": {
         "http://localhost:8000/ci-schema.json": "/*.yml"
-    }
+    },
+    "editor.tabSize": 2
 }

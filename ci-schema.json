@@ -1,92 +1,92 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://github.com/Microsoft/vsts-agent/blob/master/src/Misc/ci-schema.json",
-    "title": "Pipeline schema",
-    "description": "A pipeline definition",
-    "type": "object",
-    "properties": {
-        "name": {
-            "description": "Pipeline name",
-            "type": "string"
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/Microsoft/vsts-agent/blob/master/src/Misc/ci-schema.json",
+  "title": "Pipeline schema",
+  "description": "A pipeline definition",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "Pipeline name",
+      "type": "string"
+    },
+    "resources": {
+      "description": "Containers and repositories used in the build"
+    },
+    "variables": {
+      "description": "Pipeline-wide variables"
+    },
+    "phases": {
+      "description": "Phases of the pipeline",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/phase"
+      }
+    }
+  },
+  "required": [],
+  "definitions": {
+    "phase": {
+      "type": "object",
+      "required": ["queue"],
+      "properties": {
+        "phase": {
+          "type": "string",
+          "description": "ID of the phase",
+          "pattern": "^[_A-Za-z0-9]*$"
         },
-        "resources": {
-            "description": "Containers and repositories used in the build"
+        "displayName": {
+          "type": "string",
+          "description": "Human-readable name of the phase"
+        },
+        "dependsOn": {
+          "type": "string",
+          "description": "Any phases which must complete before this one"
+        },
+        "condition": {
+          "type": "string",
+          "description": "Evaluate this condition expression to determine whether to run this phase"
+        },
+        "continueOnError": {
+          "type": "boolean",
+          "description": "Continue running this phase even on failure?"
+        },
+        "queue": {
+          "type": "string",
+          "description": "Name of the queue in which to run this phase",
+          "examples": [
+            "Hosted VS2017",
+            "Hosted macOS Preview",
+            "Hosted Linux Preview"
+          ]
+        },
+        "server": {
+          "type": "boolean",
+          "description": "True if this is an agent-less phase (runs on server)"
         },
         "variables": {
-            "description": "Pipeline-wide variables"
+          "type": "array",
+          "description": "Phase-specific variables"
         },
-        "phases": {
-            "description": "Phases of the pipeline",
-            "type": "array",
-            "items": {
-                "$ref": "#/definitions/phase"
-            }
+        "steps": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              { "$ref": "#/definitions/script" },
+              { "$ref": "#/definitions/bash" },
+              { "$ref": "#/definitions/powershell" },
+              { "$ref": "#/definitions/checkout" },
+              { "$ref": "#/definitions/task" },
+              { "$ref": "#/definitions/templateReference" }
+            ]
+          }
         }
+      }
     },
-    "required": [],
-    "definitions": {
-        "phase": {
-            "type": "object",
-            "required": ["queue"],
-            "properties": {
-                "phase": {
-                    "type": "string",
-                    "description": "ID of the phase",
-                    "pattern": "^[_A-Za-z0-9]*$"
-                },
-                "displayName": {
-                    "type": "string",
-                    "description": "Human-readable name of the phase"
-                },
-                "dependsOn": {
-                    "type": "string",
-                    "description": "Any phases which must complete before this one"
-                },
-                "condition": {
-                    "type": "string",
-                    "description": "Evaluate this condition expression to determine whether to run this phase"
-                },
-                "continueOnError": {
-                    "type": "boolean",
-                    "description": "Continue running this phase even on failure?"
-                },
-                "queue": {
-                    "type": "string",
-                    "description": "Name of the queue in which to run this phase",
-                    "examples": [
-                        "Hosted VS2017",
-                        "Hosted macOS Preview",
-                        "Hosted Linux Preview"
-                    ]
-                },
-                "server": {
-                    "type": "boolean",
-                    "description": "True if this is an agent-less phase (runs on server)"
-                },
-                "variables": {
-                    "type": "array",
-                    "description": "Phase-specific variables"
-                },
-                "steps": {
-                    "type": "array",
-                    "items": {
-                        "oneOf": [
-                            { "$ref": "#/definitions/script" },
-                            { "$ref": "#/definitions/bash" },
-                            { "$ref": "#/definitions/powershell" },
-                            { "$ref": "#/definitions/checkout" },
-                            { "$ref": "#/definitions/task" },
-                            { "$ref": "#/definitions/templateReference" }
-                        ]
-                    }
-                }
-            }
-        },
-        "script": {},
-        "bash": {},
-        "powershell": {},
-        "checkout": {},
-        "task": {},
-        "templateReference": {}
-    }
+    "script": {},
+    "bash": {},
+    "powershell": {},
+    "checkout": {},
+    "task": {},
+    "templateReference": {}
+  }
 }
