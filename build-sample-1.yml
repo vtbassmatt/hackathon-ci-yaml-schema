@@ -1,6 +1,7 @@
 name: 'Simple example'
 phases:
 - phase: DoAThing
+  queue: "Hosted VS2017"
   displayName: 'Do a thing'
   steps:
   - script: echo Hello world
