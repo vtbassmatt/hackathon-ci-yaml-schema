@@ -22,7 +22,11 @@
           "type": "object",
           "properties": {
             "containers": {
-              "$comment": "TODO"
+              "description": "Container images",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/containerReference"
+              }
             },
             "repositories": {
               "description": "External repositories",
@@ -407,6 +411,42 @@
             "refs/heads/master",
             "refs/tags/lkg"
           ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "containerReference": {
+      "type": "object",
+      "required": ["container", "image"],
+      "properties": {
+        "container": {
+          "type": "string",
+          "description": "ID for the container",
+          "pattern": "^[A-Za-z0-9_]+$"
+        },
+        "image": {
+          "type": "string",
+          "description": "Container image name",
+          "examples": [
+            "ubuntu:16.04",
+            "windows:1803"
+          ]
+        },
+        "endpoint": {
+          "type": "string",
+          "description": "ID of the service endpoint connecting to a private container registry"
+        },
+        "options": {
+          "type": "string",
+          "description": "Options to pass into container host"
+        },
+        "localImage": {
+          "type": "boolean",
+          "description": "TODO - document localImage"
+        },
+        "env": {
+          "type": "object",
+          "description": "Variables to map into the container's environment"
         }
       },
       "additionalProperties": false
