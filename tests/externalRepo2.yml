@@ -1,0 +1,10 @@
+parameters:
+  solution: '**/*.sln'
+
+steps:
+- task: MSBuild@1
+  inputs:
+    solution: ${{ parameters.solution }}
+- task: VSTest@2
+  inputs:
+    solution: ${{ parameters.solution }}

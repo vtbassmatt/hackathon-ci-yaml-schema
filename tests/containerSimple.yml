@@ -1,0 +1,8 @@
+resources:
+  containers:
+  - container: dev
+    image: ubuntu:16.04
+queue:
+  container: dev
+steps:
+- script: printenv

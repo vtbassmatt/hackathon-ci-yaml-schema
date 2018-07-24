@@ -1,6 +1,0 @@
-name: 'Simple example'
-phases:
-- phase: DoAThing
-  displayName: 'Do a thing'
-  steps:
-  - script: echo Hello world

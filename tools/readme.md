@@ -1,0 +1,1 @@
+This is a scratch area to build one-off tools for helping construct this schema.

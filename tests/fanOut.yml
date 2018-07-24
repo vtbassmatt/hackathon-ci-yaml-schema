@@ -1,0 +1,17 @@
+phases:
+- phase: InitialPhase
+  queue: dummy
+  steps:
+  - script: echo hello from initial phase
+
+- phase: SubsequentA
+  queue: dummy
+  dependsOn: InitialPhase
+  steps:
+  - script: echo hello from subsequent A
+
+- phase: SubsequentB
+  queue: dummy
+  dependsOn: InitialPhase
+  steps:
+  - script: echo hello from subsequent B
