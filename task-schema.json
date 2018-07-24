@@ -5,12 +5,14 @@
   "title": "Pipeline task schema",
   "description": "A task definition",
   "type": "object",
-  "required": ["task"],
+  "required": [
+    "task"
+  ],
   "anyOf": [
     {
       "properties": {
         "task": {
-          "pattern": "^AndroidSigning@2$",
+          "pattern": "^[aA][nN][dD][rR][oO][iI][dD][sS][iI][gG][nN][iI][nN][gG]@2$",
           "description": "Android Signing\n\nSign and align Android APK files"
         },
         "inputs": {
@@ -58,7 +60,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^AndroidSigning@3$",
+          "pattern": "^[aA][nN][dD][rR][oO][iI][dD][sS][iI][gG][nN][iI][nN][gG]@3$",
           "description": "Android Signing\n\nSign and align Android APK files"
         },
         "inputs": {
@@ -110,7 +112,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^Ant@1$",
+          "pattern": "^[aA][nN][tT]@1$",
           "description": "Ant\n\nBuild with Apache Ant"
         },
         "inputs": {
@@ -204,7 +206,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^AppCenterDistribute@1$",
+          "pattern": "^[aA][pP][pP][cC][eE][nN][tT][eE][rR][dD][iI][sS][tT][rR][iI][bB][uU][tT][eE]@1$",
           "description": "App Center Distribute\n\nDistribute app builds to testers and users via App Center"
         },
         "inputs": {
@@ -282,7 +284,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^AppCenterTest@1$",
+          "pattern": "^[aA][pP][pP][cC][eE][nN][tT][eE][rR][tT][eE][sS][tT]@1$",
           "description": "App Center Test\n\nTest app packages with Visual Studio App Center."
         },
         "inputs": {
@@ -470,7 +472,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^ArchiveFiles@2$",
+          "pattern": "^[aA][rR][cC][hH][iI][vV][eE][fF][iI][lL][eE][sS]@2$",
           "description": "Archive Files\n\nArchive files using compression formats such as .7z, .rar, .tar.gz, and .zip."
         },
         "inputs": {
@@ -523,7 +525,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^AzureAppServiceManage@0$",
+          "pattern": "^[aA][zZ][uU][rR][eE][aA][pP][pP][sS][eE][rR][vV][iI][cC][eE][mM][aA][nN][aA][gG][eE]@0$",
           "description": "Azure App Service Manage\n\nStart, Stop, Restart, Slot swap, Install site extensions or Enable Continuous Monitoring for an Azure App Service"
         },
         "inputs": {
@@ -612,7 +614,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^AzureCLI@1$",
+          "pattern": "^[aA][zZ][uU][rR][eE][cC][lL][iI]@1$",
           "description": "Azure CLI\n\nRun a Shell or Batch script with Azure CLI commands against an azure subscription"
         },
         "inputs": {
@@ -662,7 +664,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^AzureCloudPowerShellDeployment@1$",
+          "pattern": "^[aA][zZ][uU][rR][eE][cC][lL][oO][uU][dD][pP][oO][wW][eE][rR][sS][hH][eE][lL][lL][dD][eE][pP][lL][oO][yY][mM][eE][nN][tT]@1$",
           "description": "Azure Cloud Service Deployment\n\nDeploy an Azure Cloud Service"
         },
         "inputs": {
@@ -750,7 +752,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^AzureFileCopy@1$",
+          "pattern": "^[aA][zZ][uU][rR][eE][fF][iI][lL][eE][cC][oO][pP][yY]@1$",
           "description": "Azure File Copy\n\nCopy files to Azure blob or VM(s)"
         },
         "inputs": {
@@ -871,7 +873,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^AzureFileCopy@2$",
+          "pattern": "^[aA][zZ][uU][rR][eE][fF][iI][lL][eE][cC][oO][pP][yY]@2$",
           "description": "Azure File Copy\n\nCopy files to Azure blob or VM(s)"
         },
         "inputs": {
@@ -996,7 +998,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^AzureFunction@1$",
+          "pattern": "^[aA][zZ][uU][rR][eE][fF][uU][nN][cC][tT][iI][oO][nN]@1$",
           "description": "Invoke Azure Function\n\nInvoke Azure function as a part of your process."
         },
         "inputs": {
@@ -1060,7 +1062,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^AzureKeyVault@1$",
+          "pattern": "^[aA][zZ][uU][rR][eE][kK][eE][yY][vV][aA][uU][lL][tT]@1$",
           "description": "Azure Key Vault\n\nDownload Azure Key Vault Secrets"
         },
         "inputs": {
@@ -1092,7 +1094,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^AzureMonitorAlerts@0$",
+          "pattern": "^[aA][zZ][uU][rR][eE][mM][oO][nN][iI][tT][oO][rR][aA][lL][eE][rR][tT][sS]@0$",
           "description": "Azure Monitor Alerts\n\nConfigure alerts on available metrics for an Azure resource"
         },
         "inputs": {
@@ -1147,7 +1149,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^AzureMonitor@0$",
+          "pattern": "^[aA][zZ][uU][rR][eE][mM][oO][nN][iI][tT][oO][rR]@0$",
           "description": "Query Azure Monitor Alerts\n\nObserve the configured Azure monitor rules for active alerts."
         },
         "inputs": {
@@ -1194,7 +1196,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^AzureMysqlDeployment@1$",
+          "pattern": "^[aA][zZ][uU][rR][eE][mM][yY][sS][qQ][lL][dD][eE][pP][lL][oO][yY][mM][eE][nN][tT]@1$",
           "description": "Azure Database for MySQL Deployment\n\nThis is an early preview. Run your scripts and make changes to your Azure Database for MySQL."
         },
         "inputs": {
@@ -1274,7 +1276,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^AzureNLBManagement@1$",
+          "pattern": "^[aA][zZ][uU][rR][eE][nN][lL][bB][mM][aA][nN][aA][gG][eE][mM][eE][nN][tT]@1$",
           "description": "Azure Network Load Balancer\n\nConnect/Disconnect an Azure virtual machine's network interface to a Load Balancer's backend address pool"
         },
         "inputs": {
@@ -1315,7 +1317,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^AzurePowerShell@3$",
+          "pattern": "^[aA][zZ][uU][rR][eE][pP][oO][wW][eE][rR][sS][hH][eE][lL][lL]@3$",
           "description": "Azure PowerShell\n\nRun a PowerShell script within an Azure environment"
         },
         "inputs": {
@@ -1385,7 +1387,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^AzureResourceGroupDeployment@2$",
+          "pattern": "^[aA][zZ][uU][rR][eE][rR][eE][sS][oO][uU][rR][cC][eE][gG][rR][oO][uU][pP][dD][eE][pP][lL][oO][yY][mM][eE][nN][tT]@2$",
           "description": "Azure Resource Group Deployment\n\nDeploy an Azure resource manager (ARM) template to a resource group. You can also start, stop, delete, deallocate all Virtual Machines (VM) in a resource group"
         },
         "inputs": {
@@ -1509,7 +1511,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^AzureRmWebAppDeployment@3$",
+          "pattern": "^[aA][zZ][uU][rR][eE][rR][mM][wW][eE][bB][aA][pP][pP][dD][eE][pP][lL][oO][yY][mM][eE][nN][tT]@3$",
           "description": "Azure App Service Deploy\n\nUpdate Azure WebApp Services On Windows, Web App On Linux with built-in images or docker containers, ASP.NET, .NET Core, PHP, Python or Node based Web applications, Function Apps, Mobile Apps, Api applications, Web Jobs using Web Deploy / Kudu REST APIs"
         },
         "inputs": {
@@ -1725,7 +1727,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^AzureRmWebAppDeployment@4$",
+          "pattern": "^[aA][zZ][uU][rR][eE][rR][mM][wW][eE][bB][aA][pP][pP][dD][eE][pP][lL][oO][yY][mM][eE][nN][tT]@4$",
           "description": "Azure App Service Deploy\n\nUpdate Azure WebApp Services On Windows, Web App On Linux with built-in images or docker containers, ASP.NET, .NET Core, PHP, Python or Node based Web applications, Function Apps, Mobile Apps, Api applications, Web Jobs using Web Deploy / Kudu REST APIs"
         },
         "inputs": {
@@ -1888,7 +1890,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^AzureVmssDeployment@0$",
+          "pattern": "^[aA][zZ][uU][rR][eE][vV][mM][sS][sS][dD][eE][pP][lL][oO][yY][mM][eE][nN][tT]@0$",
           "description": "Azure VM scale set Deployment\n\nDeploy Virtual Machine scale set image"
         },
         "inputs": {
@@ -1956,7 +1958,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^Bash@3$",
+          "pattern": "^[bB][aA][sS][hH]@3$",
           "description": "Bash\n\nRun a Bash script on macOS, Linux, or Windows"
         },
         "inputs": {
@@ -1996,7 +1998,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^BatchScript@1$",
+          "pattern": "^[bB][aA][tT][cC][hH][sS][cC][rR][iI][pP][tT]@1$",
           "description": "Batch Script\n\nRun a windows cmd or bat script and optionally allow it to change the environment"
         },
         "inputs": {
@@ -2035,7 +2037,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^Chef@1$",
+          "pattern": "^[cC][hH][eE][fF]@1$",
           "description": "Chef\n\nDeploy to Chef environments by editing environment attributes"
         },
         "inputs": {
@@ -2072,7 +2074,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^ChefKnife@1$",
+          "pattern": "^[cC][hH][eE][fF][kK][nN][iI][fF][eE]@1$",
           "description": "Chef Knife\n\nRun Scripts with knife commands on your chef workstation"
         },
         "inputs": {
@@ -2104,7 +2106,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^CMake@1$",
+          "pattern": "^[cC][mM][aA][kK][eE]@1$",
           "description": "CMake\n\nBuild with the CMake cross-platform build system"
         },
         "inputs": {
@@ -2125,7 +2127,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^CmdLine@2$",
+          "pattern": "^[cC][mM][dD][lL][iI][nN][eE]@2$",
           "description": "Command Line\n\nRun a command line script using cmd.exe on Windows and bash on macOS and Linux."
         },
         "inputs": {
@@ -2150,7 +2152,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^CocoaPods@0$",
+          "pattern": "^[cC][oO][cC][oO][aA][pP][oO][dD][sS]@0$",
           "description": "CocoaPods\n\nCocoaPods is a dependency manager for Swift and Objective-C Cocoa projects. This task runs 'pod install'."
         },
         "inputs": {
@@ -2181,7 +2183,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^CondaEnvironment@1$",
+          "pattern": "^[cC][oO][nN][dD][aA][eE][nN][vV][iI][rR][oO][nN][mM][eE][nN][tT]@1$",
           "description": "Conda Environment\n\nCreate and activate a Conda environment."
         },
         "inputs": {
@@ -2222,7 +2224,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^CopyFiles@2$",
+          "pattern": "^[cC][oO][pP][yY][fF][iI][lL][eE][sS]@2$",
           "description": "Copy Files\n\nCopy files from source folder to target folder using match patterns (The match patterns will only match file paths, not folder paths)"
         },
         "inputs": {
@@ -2265,7 +2267,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^CopyFilesOverSSH@0$",
+          "pattern": "^[cC][oO][pP][yY][fF][iI][lL][eE][sS][oO][vV][eE][rR][sS][sS][hH]@0$",
           "description": "Copy Files Over SSH\n\nCopy files or build artifacts to a remote machine over SSH"
         },
         "inputs": {
@@ -2316,7 +2318,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^cURLUploader@2$",
+          "pattern": "^[cC][uU][rR][lL][uU][pP][lL][oO][aA][dD][eE][rR]@2$",
           "description": "cURL Upload Files\n\nUse cURL to upload files with FTP, FTPS, SFTP, HTTP, and more."
         },
         "inputs": {
@@ -2374,7 +2376,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^DecryptFile@1$",
+          "pattern": "^[dD][eE][cC][rR][yY][pP][tT][fF][iI][lL][eE]@1$",
           "description": "Decrypt File (OpenSSL)\n\nA thin utility task for file decryption using OpenSSL."
         },
         "inputs": {
@@ -2414,7 +2416,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^Delay@1$",
+          "pattern": "^[dD][eE][lL][aA][yY]@1$",
           "description": "Delay\n\nDelay further execution of the workflow by a fixed time."
         },
         "inputs": {
@@ -2431,7 +2433,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^DeleteFiles@1$",
+          "pattern": "^[dD][eE][lL][eE][tT][eE][fF][iI][lL][eE][sS]@1$",
           "description": "Delete Files\n\nDelete files or folders. (The minimatch patterns will only match file paths, not folder paths)"
         },
         "inputs": {
@@ -2452,7 +2454,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^DeployVisualStudioTestAgent@2$",
+          "pattern": "^[dD][eE][pP][lL][oO][yY][vV][iI][sS][uU][aA][lL][sS][tT][uU][dD][iI][oO][tT][eE][sS][tT][aA][gG][eE][nN][tT]@2$",
           "description": "Visual Studio Test Agent Deployment\n\nDeprecated: This task and it’s companion task (Run Functional Tests) are deprecated. Use the 'Visual Studio Test' task instead. The VSTest task can run unit as well as functional tests. Run tests on one or more agents using the multi-agent phase setting. Use the 'Visual Studio Test Platform' task to run tests without needing Visual Studio on the agent. VSTest task also brings new capabilities such as automatically rerunning failed tests."
         },
         "inputs": {
@@ -2529,7 +2531,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^Docker@0$",
+          "pattern": "^[dD][oO][cC][kK][eE][rR]@0$",
           "description": "Docker\n\nBuild, tag, push, or run Docker images, or run a Docker command. Task can be used with Docker or Azure Container registry."
         },
         "inputs": {
@@ -2681,7 +2683,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^Docker@1$",
+          "pattern": "^[dD][oO][cC][kK][eE][rR]@1$",
           "description": "Docker\n\nBuild, tag, push, or run Docker images, or run a Docker command. Task can be used with Docker or Azure Container registry."
         },
         "inputs": {
@@ -2831,7 +2833,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^DockerCompose@0$",
+          "pattern": "^[dD][oO][cC][kK][eE][rR][cC][oO][mM][pP][oO][sS][eE]@0$",
           "description": "Docker Compose\n\nBuild, push or run multi-container Docker applications. Task can be used with Docker or Azure Container registry."
         },
         "inputs": {
@@ -2980,7 +2982,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^DotNetCoreCLI@2$",
+          "pattern": "^[dD][oO][tT][nN][eE][tT][cC][oO][rR][eE][cC][lL][iI]@2$",
           "description": ".NET Core\n\nBuild, test, package, or publish a dotnet application, or run a custom dotnet command. For package commands, supports NuGet.org and authenticated feeds like Package Management and MyGet."
         },
         "inputs": {
@@ -3155,7 +3157,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^DotNetCoreInstaller@0$",
+          "pattern": "^[dD][oO][tT][nN][eE][tT][cC][oO][rR][eE][iI][nN][sS][tT][aA][lL][lL][eE][rR]@0$",
           "description": ".NET Core Tool Installer\n\nAcquires a specific version of .NET Core from internet or the tools cache and adds it to the PATH. Use this task to change the version of .NET Core used in subsequent tasks."
         },
         "inputs": {
@@ -3179,7 +3181,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^DownloadBuildArtifacts@0$",
+          "pattern": "^[dD][oO][wW][nN][lL][oO][aA][dD][bB][uU][iI][lL][dD][aA][rR][tT][iI][fF][aA][cC][tT][sS]@0$",
           "description": "Download Build Artifacts\n\nDownload Build Artifacts"
         },
         "inputs": {
@@ -3250,7 +3252,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^DownloadFileshareArtifacts@1$",
+          "pattern": "^[dD][oO][wW][nN][lL][oO][aA][dD][fF][iI][lL][eE][sS][hH][aA][rR][eE][aA][rR][tT][iI][fF][aA][cC][tT][sS]@1$",
           "description": "Download Fileshare Artifacts\n\nDownload artifacts from a file share e.g \\\\share\\drop"
         },
         "inputs": {
@@ -3290,7 +3292,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^DownloadPackage@0$",
+          "pattern": "^[dD][oO][wW][nN][lL][oO][aA][dD][pP][aA][cC][kK][aA][gG][eE]@0$",
           "description": "Download Package\n\nDownload a package from a Package Management feed in VSTS or TFS.  Requires the Package Management extension."
         },
         "inputs": {
@@ -3327,7 +3329,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^DownloadSecureFile@1$",
+          "pattern": "^[dD][oO][wW][nN][lL][oO][aA][dD][sS][eE][cC][uU][rR][eE][fF][iI][lL][eE]@1$",
           "description": "Download Secure File\n\nDownload a secure file to a temporary location on the build or release agent"
         },
         "inputs": {
@@ -3349,7 +3351,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^ExtractFiles@1$",
+          "pattern": "^[eE][xX][tT][rR][aA][cC][tT][fF][iI][lL][eE][sS]@1$",
           "description": "Extract Files\n\nExtract a variety of archive and compression files such as .7z, .rar, .tar.gz, and .zip."
         },
         "inputs": {
@@ -3380,7 +3382,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^FtpUpload@1$",
+          "pattern": "^[fF][tT][pP][uU][pP][lL][oO][aA][dD]@1$",
           "description": "FTP Upload\n\nFTP Upload"
         },
         "inputs": {
@@ -3454,7 +3456,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^Go@0$",
+          "pattern": "^[gG][oO]@0$",
           "description": "Go\n\nGet, build, or test a Go application, or run a custom Go command."
         },
         "inputs": {
@@ -3488,7 +3490,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^GoTool@0$",
+          "pattern": "^[gG][oO][tT][oO][oO][lL]@0$",
           "description": "Go Tool Installer\n\nFinds or downloads a specific version of Go in the tools cache and adds it to the PATH. Use this to set the version of Go used in subsequent tasks."
         },
         "inputs": {
@@ -3513,7 +3515,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^Gradle@2$",
+          "pattern": "^[gG][rR][aA][dD][lL][eE]@2$",
           "description": "Gradle\n\nBuild using a Gradle wrapper script"
         },
         "inputs": {
@@ -3634,7 +3636,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^Grunt@0$",
+          "pattern": "^[gG][rR][uU][nN][tT]@0$",
           "description": "Grunt\n\nThe JavaScript Task Runner"
         },
         "inputs": {
@@ -3698,7 +3700,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^Gulp@0$",
+          "pattern": "^[gG][uU][lL][pP]@0$",
           "description": "Gulp\n\nNode.js streaming task based build system"
         },
         "inputs": {
@@ -3762,7 +3764,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^HelmDeploy@0$",
+          "pattern": "^[hH][eE][lL][mM][dD][eE][pP][lL][oO][yY]@0$",
           "description": "Package and deploy Helm charts\n\nDeploy, configure, update your Kubernetes cluster in Azure Container Service by running helm commands."
         },
         "inputs": {
@@ -3909,7 +3911,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^HelmInstaller@0$",
+          "pattern": "^[hH][eE][lL][mM][iI][nN][sS][tT][aA][lL][lL][eE][rR]@0$",
           "description": "Helm tool installer\n\nInstall Helm and Kubernetes on agent machine."
         },
         "inputs": {
@@ -3942,7 +3944,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^IISWebAppDeploymentOnMachineGroup@0$",
+          "pattern": "^[iI][iI][sS][wW][eE][bB][aA][pP][pP][dD][eE][pP][lL][oO][yY][mM][eE][nN][tT][oO][nN][mM][aA][cC][hH][iI][nN][eE][gG][rR][oO][uU][pP]@0$",
           "description": "IIS Web App Deploy\n\nDeploy a Website or Web Application using WebDeploy"
         },
         "inputs": {
@@ -4005,7 +4007,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^IISWebAppManagementOnMachineGroup@0$",
+          "pattern": "^[iI][iI][sS][wW][eE][bB][aA][pP][pP][mM][aA][nN][aA][gG][eE][mM][eE][nN][tT][oO][nN][mM][aA][cC][hH][iI][nN][eE][gG][rR][oO][uU][pP]@0$",
           "description": "IIS Web App Manage\n\nCreate or update a Website, Web App, Virtual Directories, and Application Pool"
         },
         "inputs": {
@@ -4329,7 +4331,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^InstallAppleCertificate@2$",
+          "pattern": "^[iI][nN][sS][tT][aA][lL][lL][aA][pP][pP][lL][eE][cC][eE][rR][tT][iI][fF][iI][cC][aA][tT][eE]@2$",
           "description": "Install Apple Certificate\n\nInstall an Apple certificate required to build on a macOS agent"
         },
         "inputs": {
@@ -4383,7 +4385,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^InstallAppleProvisioningProfile@1$",
+          "pattern": "^[iI][nN][sS][tT][aA][lL][lL][aA][pP][pP][lL][eE][pP][rR][oO][vV][iI][sS][iI][oO][nN][iI][nN][gG][pP][rR][oO][fF][iI][lL][eE]@1$",
           "description": "Install Apple Provisioning Profile\n\nInstall an Apple provisioning profile required to build on a macOS agent"
         },
         "inputs": {
@@ -4414,7 +4416,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^InstallSSHKey@0$",
+          "pattern": "^[iI][nN][sS][tT][aA][lL][lL][sS][sS][hH][kK][eE][yY]@0$",
           "description": "Install SSH Key\n\nInstall an SSH key prior to a build or release"
         },
         "inputs": {
@@ -4450,7 +4452,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^InvokeRESTAPI@1$",
+          "pattern": "^[iI][nN][vV][oO][kK][eE][rR][eE][sS][tT][aA][pP][iI]@1$",
           "description": "Invoke REST API\n\nInvoke REST API as a part of your process."
         },
         "inputs": {
@@ -4514,7 +4516,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^JavaToolInstaller@0$",
+          "pattern": "^[jJ][aA][vV][aA][tT][oO][oO][lL][iI][nN][sS][tT][aA][lL][lL][eE][rR]@0$",
           "description": "Java Tool Installer\n\nAcquires a specific version of Java from a user supplied Azure blob or the tools cache and sets JAVA_HOME. Use this task to change the version of Java used in Java tasks."
         },
         "inputs": {
@@ -4581,7 +4583,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^JenkinsDownloadArtifacts@1$",
+          "pattern": "^[jJ][eE][nN][kK][iI][nN][sS][dD][oO][wW][nN][lL][oO][aA][dD][aA][rR][tT][iI][fF][aA][cC][tT][sS]@1$",
           "description": "Jenkins Download Artifacts\n\nDownload artifacts produced by a Jenkins job"
         },
         "inputs": {
@@ -4670,7 +4672,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^JenkinsQueueJob@2$",
+          "pattern": "^[jJ][eE][nN][kK][iI][nN][sS][qQ][uU][eE][uU][eE][jJ][oO][bB]@2$",
           "description": "Jenkins Queue Job\n\nQueue a job on a Jenkins server"
         },
         "inputs": {
@@ -4724,7 +4726,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^Kubernetes@0$",
+          "pattern": "^[kK][uU][bB][eE][rR][nN][eE][tT][eE][sS]@0$",
           "description": "Deploy to Kubernetes\n\nDeploy, configure, update your Kubernetes cluster in Azure Container Service by running kubectl commands."
         },
         "inputs": {
@@ -4864,7 +4866,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^Kubernetes@1$",
+          "pattern": "^[kK][uU][bB][eE][rR][nN][eE][tT][eE][sS]@1$",
           "description": "Deploy to Kubernetes\n\nDeploy, configure, update your Kubernetes cluster in Azure Container Service by running kubectl commands."
         },
         "inputs": {
@@ -5019,7 +5021,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^ManualIntervention@8$",
+          "pattern": "^[mM][aA][nN][uU][aA][lL][iI][nN][tT][eE][rR][vV][eE][nN][tT][iI][oO][nN]@8$",
           "description": "Manual Intervention\n\nPause deployment and wait for intervention"
         },
         "inputs": {
@@ -5046,7 +5048,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^Maven@2$",
+          "pattern": "^[mM][aA][vV][eE][nN]@2$",
           "description": "Maven\n\nBuild with Apache Maven"
         },
         "inputs": {
@@ -5182,7 +5184,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^MSBuild@1$",
+          "pattern": "^[mM][sS][bB][uU][iI][lL][dD]@1$",
           "description": "MSBuild\n\nBuild with MSBuild"
         },
         "inputs": {
@@ -5259,7 +5261,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^NodeTool@0$",
+          "pattern": "^[nN][oO][dD][eE][tT][oO][oO][lL]@0$",
           "description": "Node Tool Installer\n\nFinds or Downloads and caches specified version spec of Node and adds it to the PATH."
         },
         "inputs": {
@@ -5280,7 +5282,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^Npm@1$",
+          "pattern": "^[nN][pP][mM]@1$",
           "description": "npm\n\nInstall and publish npm packages, or run an npm command. Supports npmjs.com and authenticated registries like Package Management."
         },
         "inputs": {
@@ -5343,7 +5345,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^npmAuthenticate@0$",
+          "pattern": "^[nN][pP][mM][aA][uU][tT][hH][eE][nN][tT][iI][cC][aA][tT][eE]@0$",
           "description": "npm Authenticate (for task runners)\n\nDon't use this task if you're also using the npm task. Provides npm credentials to an .npmrc file in your repository for the scope of the build. This enables npm task runners like Gulp and Grunt to authenticate with private registries."
         },
         "inputs": {
@@ -5364,7 +5366,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^NuGet@0$",
+          "pattern": "^[nN][uU][gG][eE][tT]@0$",
           "description": "NuGet Command\n\nDeprecated: use the “NuGet” task instead. It works with the new Tool Installer framework so you can easily use new versions of NuGet without waiting for a task update, provides better support for authenticated feeds outside this account/collection, and uses NuGet 4 by default."
         },
         "inputs": {
@@ -5391,7 +5393,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^NuGetCommand@2$",
+          "pattern": "^[nN][uU][gG][eE][tT][cC][oO][mM][mM][aA][nN][dD]@2$",
           "description": "NuGet\n\nRestore, pack, or push NuGet packages, or run a NuGet command. Supports NuGet.org and authenticated feeds like Package Management and MyGet. Uses NuGet.exe and works with .NET Framework apps. For .NET Core and .NET Standard apps, use the .NET Core task."
         },
         "inputs": {
@@ -5567,7 +5569,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^NuGetPackager@0$",
+          "pattern": "^[nN][uU][gG][eE][tT][pP][aA][cC][kK][aA][gG][eE][rR]@0$",
           "description": "NuGet Packager\n\nDeprecated: use the “NuGet” task instead. It works with the new Tool Installer framework so you can easily use new versions of NuGet without waiting for a task update, provides better support for authenticated feeds outside this account/collection, and uses NuGet 4 by default."
         },
         "inputs": {
@@ -5633,7 +5635,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^NuGetPublisher@0$",
+          "pattern": "^[nN][uU][gG][eE][tT][pP][uU][bB][lL][iI][sS][hH][eE][rR]@0$",
           "description": "NuGet Publisher\n\nDeprecated: use the “NuGet” task instead. It works with the new Tool Installer framework so you can easily use new versions of NuGet without waiting for a task update, provides better support for authenticated feeds outside this account/collection, and uses NuGet 4 by default."
         },
         "inputs": {
@@ -5695,7 +5697,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^NuGetToolInstaller@0$",
+          "pattern": "^[nN][uU][gG][eE][tT][tT][oO][oO][lL][iI][nN][sS][tT][aA][lL][lL][eE][rR]@0$",
           "description": "NuGet Tool Installer\n\nAcquires a specific version of NuGet from the internet or the tools cache and adds it to the PATH. Use this task to change the version of NuGet used in the NuGet tasks."
         },
         "inputs": {
@@ -5716,7 +5718,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^PackerBuild@0$",
+          "pattern": "^[pP][aA][cC][kK][eE][rR][bB][uU][iI][lL][dD]@0$",
           "description": "Build Machine Image\n\nBuild machine image using Packer. This image can be used for Azure Virtual machine scale set deployment"
         },
         "inputs": {
@@ -5833,7 +5835,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^PowerShell@2$",
+          "pattern": "^[pP][oO][wW][eE][rR][sS][hH][eE][lL][lL]@2$",
           "description": "PowerShell\n\nRun a PowerShell script on Windows, macOS, or Linux."
         },
         "inputs": {
@@ -5885,7 +5887,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^PowerShellOnTargetMachines@2$",
+          "pattern": "^[pP][oO][wW][eE][rR][sS][hH][eE][lL][lL][oO][nN][tT][aA][rR][gG][eE][tT][mM][aA][cC][hH][iI][nN][eE][sS]@2$",
           "description": "PowerShell on Target Machines\n\nExecute PowerShell scripts on remote machine(s)"
         },
         "inputs": {
@@ -5959,7 +5961,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^PowerShellOnTargetMachines@3$",
+          "pattern": "^[pP][oO][wW][eE][rR][sS][hH][eE][lL][lL][oO][nN][tT][aA][rR][gG][eE][tT][mM][aA][cC][hH][iI][nN][eE][sS]@3$",
           "description": "PowerShell on Target Machines\n\nExecute PowerShell scripts on remote machine(s). This version of the task uses PSSession and Invoke-Command for remoting."
         },
         "inputs": {
@@ -6059,7 +6061,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^PublishBuildArtifacts@1$",
+          "pattern": "^[pP][uU][bB][lL][iI][sS][hH][bB][uU][iI][lL][dD][aA][rR][tT][iI][fF][aA][cC][tT][sS]@1$",
           "description": "Publish Build Artifacts\n\nPublish build artifacts to Visual Studio Team Services/TFS or a file share"
         },
         "inputs": {
@@ -6098,7 +6100,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^PublishCodeCoverageResults@1$",
+          "pattern": "^[pP][uU][bB][lL][iI][sS][hH][cC][oO][dD][eE][cC][oO][vV][eE][rR][aA][gG][eE][rR][eE][sS][uU][lL][tT][sS]@1$",
           "description": "Publish Code Coverage Results\n\nPublish Cobertura or JaCoCo code coverage results from a build"
         },
         "inputs": {
@@ -6140,7 +6142,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^PublishSymbols@2$",
+          "pattern": "^[pP][uU][bB][lL][iI][sS][hH][sS][yY][mM][bB][oO][lL][sS]@2$",
           "description": "Index Sources & Publish Symbols\n\nIndex your source code and publish symbols to a file share or Visual Studio Team Services Symbol Server"
         },
         "inputs": {
@@ -6205,7 +6207,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^PublishTestResults@2$",
+          "pattern": "^[pP][uU][bB][lL][iI][sS][hH][tT][eE][sS][tT][rR][eE][sS][uU][lL][tT][sS]@2$",
           "description": "Publish Test Results\n\nPublish Test Results to VSTS/TFS"
         },
         "inputs": {
@@ -6255,7 +6257,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^PublishToAzureServiceBus@1$",
+          "pattern": "^[pP][uU][bB][lL][iI][sS][hH][tT][oO][aA][zZ][uU][rR][eE][sS][eE][rR][vV][iI][cC][eE][bB][uU][sS]@1$",
           "description": "Publish To Azure Service Bus\n\nSends a message to azure service bus using a service connection (no agent required)."
         },
         "inputs": {
@@ -6298,7 +6300,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^PyPIPublisher@0$",
+          "pattern": "^[pP][yY][pP][iI][pP][uU][bB][lL][iI][sS][hH][eE][rR]@0$",
           "description": "PyPI Publisher\n\nCreate and upload an sdist or wheel to a PyPI-compatible index using Twine."
         },
         "inputs": {
@@ -6330,7 +6332,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^PythonScript@0$",
+          "pattern": "^[pP][yY][tT][hH][oO][nN][sS][cC][rR][iI][pP][tT]@0$",
           "description": "Python Script\n\nRun a Python script."
         },
         "inputs": {
@@ -6374,7 +6376,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^queryWorkItems@0$",
+          "pattern": "^[qQ][uU][eE][rR][yY][wW][oO][rR][kK][iI][tT][eE][mM][sS]@0$",
           "description": "Query Work Items\n\nExecutes a work item query and checks for the number of items returned."
         },
         "inputs": {
@@ -6404,7 +6406,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^QuickPerfTest@1$",
+          "pattern": "^[qQ][uU][iI][cC][kK][pP][eE][rR][fF][tT][eE][sS][tT]@1$",
           "description": "Cloud-based Web Performance Test\n\nRuns a quick web performance test in the cloud with Visual Studio Team Services"
         },
         "inputs": {
@@ -6496,7 +6498,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^RunVisualStudioTestsusingTestAgent@1$",
+          "pattern": "^[rR][uU][nN][vV][iI][sS][uU][aA][lL][sS][tT][uU][dD][iI][oO][tT][eE][sS][tT][sS][uU][sS][iI][nN][gG][tT][eE][sS][tT][aA][gG][eE][nN][tT]@1$",
           "description": "Run Functional Tests\n\nDeprecated: This task and it’s companion task (Visual Studio Test Agent Deployment) are deprecated. Use the 'Visual Studio Test' task instead. The VSTest task can run unit as well as functional tests. Run tests on one or more agents using the multi-agent phase setting. Use the 'Visual Studio Test Platform' task to run tests without needing Visual Studio on the agent. VSTest task also brings new capabilities such as automatically rerunning failed tests."
         },
         "inputs": {
@@ -6587,7 +6589,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^ApacheJMeterLoadTest@1$",
+          "pattern": "^[aA][pP][aA][cC][hH][eE][jJ][mM][eE][tT][eE][rR][lL][oO][aA][dD][tT][eE][sS][tT]@1$",
           "description": "Cloud-based Apache JMeter Load Test\n\nRuns the Apache JMeter load test in cloud"
         },
         "inputs": {
@@ -6668,7 +6670,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^CloudLoadTest@1$",
+          "pattern": "^[cC][lL][oO][uU][dD][lL][oO][aA][dD][tT][eE][sS][tT]@1$",
           "description": "Cloud-based Load Test\n\nRuns the load test in the cloud with Visual Studio Team Services"
         },
         "inputs": {
@@ -6735,7 +6737,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^ServiceFabricComposeDeploy@0$",
+          "pattern": "^[sS][eE][rR][vV][iI][cC][eE][fF][aA][bB][rR][iI][cC][cC][oO][mM][pP][oO][sS][eE][dD][eE][pP][lL][oO][yY]@0$",
           "description": "Service Fabric Compose Deploy\n\nDeploy a docker-compose application to a Service Fabric cluster."
         },
         "inputs": {
@@ -6811,7 +6813,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^ServiceFabricDeploy@1$",
+          "pattern": "^[sS][eE][rR][vV][iI][cC][eE][fF][aA][bB][rR][iI][cC][dD][eE][pP][lL][oO][yY]@1$",
           "description": "Service Fabric Application Deployment\n\nDeploy a Service Fabric application to a cluster."
         },
         "inputs": {
@@ -6994,7 +6996,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^ServiceFabricPowerShell@1$",
+          "pattern": "^[sS][eE][rR][vV][iI][cC][eE][fF][aA][bB][rR][iI][cC][pP][oO][wW][eE][rR][sS][hH][eE][lL][lL]@1$",
           "description": "Service Fabric PowerShell\n\nRun a PowerShell script within the context of an Azure Service Fabric cluster connection."
         },
         "inputs": {
@@ -7036,7 +7038,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^ServiceFabricUpdateManifests@2$",
+          "pattern": "^[sS][eE][rR][vV][iI][cC][eE][fF][aA][bB][rR][iI][cC][uU][pP][dD][aA][tT][eE][mM][aA][nN][iI][fF][eE][sS][tT][sS]@2$",
           "description": "Update Service Fabric Manifests\n\nAutomatically updates portions of the application and service manifests within a packaged Service Fabric application."
         },
         "inputs": {
@@ -7112,7 +7114,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^SqlAzureDacpacDeployment@1$",
+          "pattern": "^[sS][qQ][lL][aA][zZ][uU][rR][eE][dD][aA][cC][pP][aA][cC][dD][eE][pP][lL][oO][yY][mM][eE][nN][tT]@1$",
           "description": "Azure SQL Database Deployment\n\nDeploy Azure SQL DB using DACPAC or run scripts using SQLCMD"
         },
         "inputs": {
@@ -7225,7 +7227,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^SqlDacpacDeploymentOnMachineGroup@0$",
+          "pattern": "^[sS][qQ][lL][dD][aA][cC][pP][aA][cC][dD][eE][pP][lL][oO][yY][mM][eE][nN][tT][oO][nN][mM][aA][cC][hH][iI][nN][eE][gG][rR][oO][uU][pP]@0$",
           "description": "SQL Server Database Deploy\n\nDeploy to SQL Server Database using DACPAC or SQL scripts"
         },
         "inputs": {
@@ -7317,7 +7319,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^SSH@0$",
+          "pattern": "^[sS][sS][hH]@0$",
           "description": "SSH\n\nRun shell commands or a script on a remote machine using SSH"
         },
         "inputs": {
@@ -7368,7 +7370,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^UsePythonVersion@0$",
+          "pattern": "^[uU][sS][eE][pP][yY][tT][hH][oO][nN][vV][eE][rR][sS][iI][oO][nN]@0$",
           "description": "Use Python Version\n\nRetrieves the specified version of Python from the tool cache. Optionally add it to PATH."
         },
         "inputs": {
@@ -7396,7 +7398,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^UseRubyVersion@0$",
+          "pattern": "^[uU][sS][eE][rR][uU][bB][yY][vV][eE][rR][sS][iI][oO][nN]@0$",
           "description": "Use Ruby Version\n\nRetrieves the specified version of Ruby from the tool cache. Optionally add it to PATH."
         },
         "inputs": {
@@ -7417,7 +7419,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^VSBuild@1$",
+          "pattern": "^[vV][sS][bB][uU][iI][lL][dD]@1$",
           "description": "Visual Studio Build\n\nBuild with MSBuild and set the Visual Studio version property."
         },
         "inputs": {
@@ -7483,7 +7485,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^VSTest@2$",
+          "pattern": "^[vV][sS][tT][eE][sS][tT]@2$",
           "description": "Visual Studio Test\n\nRun unit and functional tests (Selenium, Appium, Coded UI test, etc.) using the Visual Studio Test (VsTest) runner. Test frameworks that have a Visual Studio test adapter such as MsTest, xUnit, NUnit, Chutzpah (for JavaScript tests using QUnit, Mocha and Jasmine), etc. can be run. Tests can be distributed on multiple agents using this task (version 2)."
         },
         "inputs": {
@@ -7665,7 +7667,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^VisualStudioTestPlatformInstaller@1$",
+          "pattern": "^[vV][iI][sS][uU][aA][lL][sS][tT][uU][dD][iI][oO][tT][eE][sS][tT][pP][lL][aA][tT][fF][oO][rR][mM][iI][nN][sS][tT][aA][lL][lL][eE][rR]@1$",
           "description": "Visual Studio Test Platform Installer\n\nAcquires the test platform from nuget.org or the tools cache. Satisfies the ‘vstest’ demand and can be used for running tests and collecting diagnostic data using the Visual Studio Test task."
         },
         "inputs": {
@@ -7714,7 +7716,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^WindowsMachineFileCopy@2$",
+          "pattern": "^[wW][iI][nN][dD][oO][wW][sS][mM][aA][cC][hH][iI][nN][eE][fF][iI][lL][eE][cC][oO][pP][yY]@2$",
           "description": "Windows Machine File Copy\n\nCopy files to remote machine(s)"
         },
         "inputs": {
@@ -7766,7 +7768,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^XamarinAndroid@1$",
+          "pattern": "^[xX][aA][mM][aA][rR][iI][nN][aA][nN][dD][rR][oO][iI][dD]@1$",
           "description": "Xamarin.Android\n\nBuild an Android app with Xamarin"
         },
         "inputs": {
@@ -7864,7 +7866,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^XamarinComponentRestore@0$",
+          "pattern": "^[xX][aA][mM][aA][rR][iI][nN][cC][oO][mM][pP][oO][nN][eE][nN][tT][rR][eE][sS][tT][oO][rR][eE]@0$",
           "description": "Xamarin Component Restore\n\nThis task is deprecated. Use 'NuGet' instead."
         },
         "inputs": {
@@ -7896,7 +7898,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^XamariniOS@2$",
+          "pattern": "^[xX][aA][mM][aA][rR][iI][nN][iI][oO][sS]@2$",
           "description": "Xamarin.iOS\n\nBuild an iOS app with Xamarin on macOS."
         },
         "inputs": {
@@ -7959,7 +7961,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^XamarinTestCloud@1$",
+          "pattern": "^[xX][aA][mM][aA][rR][iI][nN][tT][eE][sS][tT][cC][lL][oO][uU][dD]@1$",
           "description": "Xamarin Test Cloud\n\n[Depreciated] Testing mobile apps with Xamarin Test Cloud using Xamarin.UITest - recommended task is now AppCenterTest"
         },
         "inputs": {
@@ -8050,7 +8052,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^Xcode@5$",
+          "pattern": "^[xX][cC][oO][dD][eE]@5$",
           "description": "Xcode\n\nBuild, test, or archive an Xcode workspace on macOS. Optionally package an app."
         },
         "inputs": {
@@ -8201,7 +8203,7 @@
     {
       "properties": {
         "task": {
-          "pattern": "^XcodePackageiOS@0$",
+          "pattern": "^[xX][cC][oO][dD][eE][pP][aA][cC][kK][aA][gG][eE][iI][oO][sS]@0$",
           "description": "Xcode Package iOS\n\nGenerate an .ipa file from Xcode build output using xcrun (Xcode 7 or below)"
         },
         "inputs": {
