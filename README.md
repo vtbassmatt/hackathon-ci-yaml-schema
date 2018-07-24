@@ -17,7 +17,13 @@ If you have multiple build definitions, you can instead put `*.yml` on the right
 
 When you load .vsts-ci.yml in VS Code, you'll get decent Intellisense for the main schema and the default tasks installed on VSTS/TFS.
 
-## Note to developers
+# Task schema
+
+The task schema was generated from all in-box tasks.
+See https://github.com/Microsoft/vsts-tasks/tree/hackathon/make-json-schema and run `node make.js genschema` to re-generate.
+Post-Hackathon, this should happen on the VSTS server based on the actual tasks installed.
+
+# Note to developers
 
 If you edit the schema, you'll have to touch your workspace settings again to get VS Code to re-read them.
 I've been adding a dummy character to the .json extension, saving, then removing the character and saving again.
