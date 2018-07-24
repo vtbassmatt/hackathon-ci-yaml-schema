@@ -8,6 +8,5 @@ phases:
   - script: echo Hello world
   - task: DotNetCoreCLI@2
     inputs:
-      command: x
+      command: push
   - task: CMake@1
-  - task: Foo
