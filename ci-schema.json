@@ -54,11 +54,6 @@
     "phase": {
       "type": "object",
       "additionalProperties": false,
-      "oneOf": [
-        { "required": ["queue"] },
-        { "required": ["server"] },
-        { "required": ["template"] }
-      ],
       "properties": {
         "phase": {
           "type": "string",
